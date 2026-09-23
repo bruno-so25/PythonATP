@@ -26,9 +26,9 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/your-user/pyATP"
-Repository = "https://github.com/your-user/pyATP"
-Issues = "https://github.com/your-user/pyATP/issues"
+Homepage = "https://github.com/bruno-so25/PythonATP"
+Repository = "https://github.com/bruno-so25/PythonATP"
+Issues = "https://github.com/bruno-so25/PythonATP/issues"
 
 [tool.setuptools]
 packages = ["pyATP", "pyATP.objects"]
