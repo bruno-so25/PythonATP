@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: pyATP
+Version: 0.1.0
+Summary: Python library for reading and manipulating ATP/EMTP input cards
+Author-email: Bruno Oliveira <bruno.sowk@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/your-user/pyATP
+Project-URL: Repository, https://github.com/your-user/pyATP
+Project-URL: Issues, https://github.com/your-user/pyATP/issues
+Keywords: ATP,EMTP,power-systems,transients,simulation
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# pyATP
+
+`pyATP` is a Python library for reading and manipulating ATP/EMTP input cards.
+
+## Overview
+
+ATP files are text-based and heavily rely on fixed-column formatting. This library exposes a small Python API to load ATP cards, inspect lines and components, and eventually build or modify sections such as `/BRANCH`.
+
+## Installation
+
+```bash
+pip install -e .
+```
+
+## Quick start
+
+```python
+from pyATP import read_atp
+
+card = read_atp("case.atp")
+print(card.lines[0])
+print(card.branches)
+```
+
+## Project structure
+
+- `pyATP/` – package root
+- `pyATP/objects/` – classes that model ATP lines, cards, branches and components
+- `tests/` – automated tests
+
+## Current status
+
+This project is in an early stage. The current focus is on reading ATP input files and modeling fixed-column fields in a reusable way.

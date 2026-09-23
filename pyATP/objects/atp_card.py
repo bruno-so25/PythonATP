@@ -1,6 +1,6 @@
 # pyATP/objects/atp_card.py
-from .atp_line import ATPLine
-from .atp_branch import BranchComponent
+from .base.atp_line import ATPLine
+from .components.atp_branch import BranchComponent
 
 class ATPCard:
     '''
