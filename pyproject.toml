@@ -31,7 +31,11 @@ Repository = "https://github.com/bruno-so25/PythonATP"
 Issues = "https://github.com/bruno-so25/PythonATP/issues"
 
 [tool.setuptools]
-packages = ["pyATP", "pyATP.objects"]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pyATP*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
