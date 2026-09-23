@@ -1,15 +1,13 @@
-# pyATP/objects/atp_branch.py
-from .atp_component import ATPComponent
+from ..base.atp_component import ATPComponent
+
 
 class BranchComponent(ATPComponent):
-    """
-    Represents a component from the /BRANCH section of the ATP file.
-    Each component may span multiple lines, and provides access to common fields.
-    """
+    """Represents a component from the /BRANCH section of an ATP case."""
+
     @property
     def type(self):
         return self.get_field(0, 1)
-    
+
     @property
     def n1(self):
         return self.get_field(3, 8)

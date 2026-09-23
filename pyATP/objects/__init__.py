@@ -1,5 +1,7 @@
-# pyATP/objects/__init__.py
-from .atp_card import ATPCard
-from .atp_line import ATPLine
+"""Public object model for the ATP package."""
 
-__all__ = ["ATPCard", "ATPLine"]
+from .atp_card import ATPCard
+from .base import ATPComponent, ATPLine
+from .components import BranchComponent
+
+__all__ = ["ATPCard", "ATPLine", "ATPComponent", "BranchComponent"]
